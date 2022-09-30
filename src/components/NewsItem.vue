@@ -3,23 +3,25 @@
     <div class="col s12">
       <div class="card card-responsive">
         <div class="card-content">
-          <span class="card-title grey-text text-darken-4">{{snippet.title}}</span>
-          <span class="card-subtitle grey-text text-darken-4"
-            >{{snippet.category}}</span
-          >
+          <span class="card-title grey-text text-darken-4">{{
+            snippet.title
+          }}</span>
+          <span class="card-subtitle grey-text text-darken-4">{{
+            snippet.category
+          }}</span>
           <div class="card-content">
-            <p>{{snippet.text}}</p>
+            <p>{{ snippet.text }}</p>
           </div>
           <div>
             <button
-              class="waves-effect waves-light btn-small"
+              class="waves-effect waves-light btn-small exp-button"
               type="submit"
               name="action"
             >
               <i class="large material-icons">edit</i>
             </button>
             <button
-              class="waves-effect waves-light btn-small"
+              class="waves-effect waves-light btn-small exp-button"
               type="submit"
               name="action"
             >
@@ -29,7 +31,7 @@
         </div>
       </div>
     </div>
-  </div>  
+  </div>
 </template>
   
   <script>
@@ -39,20 +41,20 @@ export default {
   props: {
     snippet: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
   name: "NewsList",
   components: {},
 };
 </script>
   
-  <style>
+  <style scoped>
 .card-responsive {
   position: relative;
 }
 
-button {
+.exp-button {
   margin: 5px;
   opacity: 0;
   position: absolute;

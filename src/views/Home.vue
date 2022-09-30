@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container">    
     <NewsList
       v-bind:snippets="snippets"
     />    
@@ -27,18 +27,5 @@ export default {
 </script>
 
 <style>
-.card-responsive {
-  position: relative;
-}
 
-button {
-  opacity: 0;
-  position: absolute;
-  transition: opacity 0.3s;
-}
-
-.card-responsive:hover button {
-  opacity: 1;
-  transition: opacity 0.3s;
-}
 </style>
