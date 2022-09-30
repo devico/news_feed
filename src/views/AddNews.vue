@@ -73,6 +73,7 @@
 
 <script>
 import {required, minLength} from 'vuelidate/lib/validators'
+import { mapActions } from "vuex";
 export default {
   name: "addNews",
   data: () => ({
@@ -86,19 +87,21 @@ export default {
     message: {required, minLength: minLength(20)}
   },
   methods: {
+    ...mapActions(["createNews"]),
     submitHandler() {
       if (this.$v.$invalid) {
         this.$v.$touch()
         return
       }
       if (this.title) {
-        const oneNews = {
+        this.createNews({
           id: Date.now(), 
           title: this.title, 
           category: this.category, 
           message: this.message
-        }
-        console.log('News: ', oneNews)
+        }) 
+
+        // console.log('News: ', oneNews)
       }
       this.$router.push("/");
     },
