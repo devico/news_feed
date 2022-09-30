@@ -21,7 +21,10 @@ export default new Vuex.Store({
   actions: {
     createNews(ctx, newNews) {
       ctx.commit('updateNews', newNews)
-    },    
+    },
+    getNewsByID(ctx, id) {
+      return ctx.state.news.filter(i => i.id == id)[0];      
+    },
   },
   modules: {
   }

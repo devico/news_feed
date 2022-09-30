@@ -13,8 +13,13 @@ const routes = [
   },
   {
     path: '/add',
-    name: 'add-news',    
-    component: AddNews
+    name: 'addNews',    
+    component: () => import('../views/AddNews.vue')    
+  },
+  {
+    path: '/detail/:id',
+    name: 'detail',    
+    component: () => import('../views/DetailNews.vue')
   },
 
 ]

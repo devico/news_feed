@@ -1,6 +1,7 @@
 <template>
   <nav class="light-blue lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">News Feed</a>
+    <div class="nav-wrapper container">
+      <router-link to="/" id="logo-container" class="brand-logo">News Feed</router-link>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Navbar Link</a></li>
       </ul>

@@ -24,6 +24,7 @@
               class="waves-effect waves-light btn-small exp-button"
               type="submit"
               name="action"
+              @click="showDetail(snippet.id)"
             >
               <i class="large material-icons">more</i>
             </button>
@@ -46,6 +47,11 @@ export default {
   },
   name: "NewsList",
   components: {},
+  methods: {
+    showDetail(id) {
+      this.$router.push(`/detail/${id}`)
+    }
+  }
 };
 </script>
   

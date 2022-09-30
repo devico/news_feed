@@ -100,8 +100,6 @@ export default {
           category: this.category, 
           message: this.message
         }) 
-
-        // console.log('News: ', oneNews)
       }
       this.$router.push("/");
     },
