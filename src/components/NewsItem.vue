@@ -9,14 +9,15 @@
           <span class="card-subtitle grey-text text-darken-4">{{
             snippet.category
           }}</span>
-          <div class="card-content">
-            <p>{{ snippet.text }}</p>
+          <div class="card-content short-desc">
+            <p class="desc">{{ snippet.message }}</p>
           </div>
-          <div>
+          <div >
             <button
               class="waves-effect waves-light btn-small exp-button"
               type="submit"
               name="action"
+              @click="editNews(snippet.id)"
             >
               <i class="large material-icons">edit</i>
             </button>
@@ -50,17 +51,20 @@ export default {
   methods: {
     showDetail(id) {
       this.$router.push(`/detail/${id}`)
+    },
+    editNews(id) {
+      this.$router.push(`/edit/${id}`)
     }
   }
 };
 </script>
   
-  <style scoped>
+<style>
 .card-responsive {
   position: relative;
 }
 
-.exp-button {
+button {
   margin: 5px;
   opacity: 0;
   position: absolute;
@@ -71,4 +75,14 @@ export default {
   opacity: 1;
   transition: opacity 0.3s;
 }
+
+.short-desc {
+  max-width: 600px;
+}
+.desc {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 </style>
